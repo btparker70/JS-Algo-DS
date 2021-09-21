@@ -16,3 +16,5 @@ There are common patterns that apply to many types of problems
 Frequency counters
   - this pattern uses objects or sets to collect values/frequencies of values
   - this can often avoid the need for nested loops or O(n^2) operations with arrays/strings
+  - this pattern is great for problems like:
+    - compare 2 strings, arrays or numbers for matching values, etc

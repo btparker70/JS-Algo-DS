@@ -45,3 +45,4 @@ function same2(arr1, arr2) {
 // then it checks the 2nd object to see if there's a square
 // if there is a square for that number, check if there's the correct amount of squares in the 2nd object
 // this is O(n)
+
