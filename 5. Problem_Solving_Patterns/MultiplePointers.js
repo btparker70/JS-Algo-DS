@@ -17,3 +17,24 @@ function sumZero(arr) {
 
 sumZero([-2, -1, 0, 1, 2]);
 
+// refacotred solution
+function sumZeroRefactored(arr) {
+  let left = 0;
+  let right = arr.length - 1;
+  while (left < right) {
+    let sum = arr[left] + arr[right];
+    if(sum === 0) {
+      return [arr[left], arr[right]];
+    } else if (sum > 0) {
+      right--;
+    } else {
+      left++;
+    }
+  }
+}
+
+// this refactored function works its way from the outside in
+// that is, it starts from 0 and the last idex
+// and compares them. if they dont sum  to 0
+// it brings in the indicies until it finds a match
+// time complexity O(n) space complexity O(1)
