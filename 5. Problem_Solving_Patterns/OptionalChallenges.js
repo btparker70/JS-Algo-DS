@@ -40,3 +40,42 @@ function areThereDuplicates() {
   }
   return false
 }
+
+// given an array and a target, find if any pairs averaged
+// equaal the target [1, 2, 3], 2.5
+
+function averagePair(arr, target){
+    // add whatever parameters you deem necessary - good luck!
+    let left = 0;
+    let right = arr.length - 1;
+    
+    if (arr.length === 0 ) return false;
+    
+    while (left < right) {
+        let average = (arr[left] + arr[right]) / 2;
+        if (average === target) {
+            return true;
+        } else if (average > target) {
+            right--;
+        } else {
+            left++;
+        }
+    }
+    return false;
+  }
+
+  // function takes 2 strings
+  // sees if the chars in str1 can fit in order in str2
+function isSubsequence(str1, str2) {
+    let pointer = 0;
+    
+    for (let char in str2) {
+        if (str2[char] === str1[pointer]) {
+            pointer++;
+        }
+        if (pointer === str1.length) {
+            return true
+        }
+    }
+    return false;
+}
