@@ -107,4 +107,4 @@ function minSubArrayLen(nums, sum) {
     }
    
     return minLen === Infinity ? 0 : minLen;
-  }
+  };
