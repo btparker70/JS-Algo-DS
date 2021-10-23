@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sort Without Articles</title>
+</head>
+<body>
+
+  <style>
+
+  </style>
+
+  <ul id="bands"></ul>
+
+<script>
+  
+  const str = 'abcdefgghijklmnopqrs'
+
+  function findLongestSubstring(str){
+  // add whatever parameters you deem necessary - good luck!
+  let start = 0;
+  let end = 0;
+  let longestSubArray = 0;
+  let tempSubArray = 0;
+  let uniqueChars = {};
+
+  while (end < str.length) {
+    if(str[end] in uniqueChars) {
+      start++;
+      end = start;
+      if(longestSubArray < tempSubArray) {
+            longestSubArray = tempSubArray;
+        }
+      tempSubArray = 0;
+      uniqueChars = {};
+    } else {
+      uniqueChars[str[end]] = 1;
+      end++;
+      tempSubArray++;
+      if(longestSubArray < tempSubArray) {
+            longestSubArray = tempSubArray;
+        }
+    }
+    
+  }
+  return longestSubArray;
+};
+// findLongestSubstring(str);
+findLongestSubstring(''); // 0
+findLongestSubstring('rithmschool'); // 7
+findLongestSubstring('thisisawesome'); // 6
+findLongestSubstring('thecatinthehat'); // 7
+findLongestSubstring('bbbbbb'); // 1
+findLongestSubstring('longestsubstring'); // 8
+findLongestSubstring('thisishowwedoit'); // 6
+</script>
+
+</body>
+</html>
