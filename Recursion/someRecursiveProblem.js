@@ -12,3 +12,11 @@ function someRecursive(arr, callBack){
   
   return someRecursive(arr.slice(1), callBack)
 }
+
+// someRecursive Solution 
+
+function someRecursive(array, callback) {
+  if (array.length === 0) return false;
+  if (callback(array[0])) return true;
+  return someRecursive(array.slice(1),callback);
+}

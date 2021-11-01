@@ -12,3 +12,9 @@ function reverse(str){
 
 console.log(reverse('abc'))
 
+// Reverse Solution
+
+function reverse(str){
+	if(str.length <= 1) return str;
+	return reverse(str.slice(1)) + str[0];
+}
