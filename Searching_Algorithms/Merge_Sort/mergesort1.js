@@ -23,4 +23,13 @@ const merge = (inputArr1, inputArr2) => {
   return arr;
 }
 
-merge([1, 10, 50], [2, 14, 99, 100])
+const mergeSort = (arr) => {
+  if(arr.length <=1) return arr;
+  const mid = Math.floor(arr.length/2);
+  const left = mergeSort(arr.slice(0, mid));
+  const right = mergeSort(arr.slice(mid));
+  return merge(left, right);
+}
+
+mergeSort([1, 10, 50, 2, 14, 99, 100])
+
