@@ -66,10 +66,18 @@ class SinglyLinkedList {
       newNode.next = this.head;
       this.head = newNode;
     }
-
-    
     this.length++;
     return this
+  }
+  get(index) {
+    if (index < 0 || index >= this.length) return null;
+    let counter = 0;
+    let current = this.head;
+    while (counter !== index) {
+      current = current.next;
+      counter++;
+    };
+    return current;
   }
 }
 
@@ -79,3 +87,11 @@ class SinglyLinkedList {
 // first.next.next.next = new Node("Bojour")
 
 const list = new SinglyLinkedList
+list.push("first")
+list.push("second")
+list.push("third")
+list.get(0)
+list.get(2)
+list.get(1)
+list.get(2)
+list.get(-1)
