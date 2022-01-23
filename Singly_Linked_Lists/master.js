@@ -90,7 +90,7 @@ class SinglyLinkedList {
   insert(index, val) {
     if (index < 0 || index > this.length) return false;
     if (index === this.length) return !!this.push(val);
-    if (index === 0) this.unshift(val);
+    if (index === 0) return !!this.unshift(val);
 
     let newNode = new Node(val);
     let previousNode = this.get(index - 1);
