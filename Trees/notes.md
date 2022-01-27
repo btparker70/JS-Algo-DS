@@ -21,3 +21,7 @@ BST are sorted to make it easier to search
 BST are used to store data that can be compared
 BST nodes store data that are less than the node value to the left, and greater than to the right
 Node of 10 has 2 children, 9 and 11
+
+BigO
+insert O(logn)
+searching O(logn)
