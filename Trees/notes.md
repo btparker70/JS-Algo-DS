@@ -25,3 +25,7 @@ Node of 10 has 2 children, 9 and 11
 BigO
 insert O(logn)
 searching O(logn)
+
+Tree traversal
+2 way
+Breadth-first Search and Depth-first Search
