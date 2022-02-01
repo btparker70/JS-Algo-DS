@@ -29,5 +29,3 @@ searching O(logn)
 Tree traversal
 2 way
 Breadth-first Search and Depth-first Search
-
-Traversal 3
