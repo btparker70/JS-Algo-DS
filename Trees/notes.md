@@ -29,3 +29,13 @@ searching O(logn)
 Tree traversal
 2 way
 Breadth-first Search and Depth-first Search
+
+When to use them?
+BFS vs DFS
+The time complexity of these are the same it's the space complexity that matters
+Trees with many nodes will create huge queues with BFS. DFS is better if huge tree
+If a tree is long and deep, it's better to use BFS
+
+DFS variants  (pre, post, in)
+DFS in order puts all the nodes in order
+DFS pre order good for cloning, flattening, duplicating, deserializing because of the array order
