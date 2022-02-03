@@ -5,15 +5,6 @@ class MaxBinaryHeap {
   insert(element) {
     this.values.push();
     this.bubbleUp();
-
-    let last = this.values.at(-1);
-    let parent = Math.floor((this.values.at(-1) - 1) / 2);
-    while(val > parent) {
-      const swap = (arr, idx1, idx2) => {
-        [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]];
-      };
-      swap(this.values, last, parent)
-    }
   }
   bubbleUp(){
     let index = this.values.length - 1;
